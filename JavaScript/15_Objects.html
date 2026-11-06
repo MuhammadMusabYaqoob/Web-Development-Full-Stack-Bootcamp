@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p>An object stores data in key-value pairs.</p>
+    <script>
+
+        const person = {
+            name: "Musab",
+            age: 22,
+            city: "Gujranwala"
+            };
+
+        console.log(person);
+
+        // Accessing Properties with Dot Notation
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city); 
+        // Accessing Properties with Bracket Notation
+        console.log(person["name"]);
+        console.log(person["age"]);
+        console.log(person["city"]);
+        //When to use Brackets?
+        // If property name is stored in a variable:
+        const propertyName = "name";
+        console.log(person[propertyName]);
+
+
+
+        // Empty Object
+        // Create an Object
+        const object1 = {};
+        // Add Properties
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+        console.log("=======Creating Empty Object")
+        console.log(object1);
+
+
+
+
+        // Updating Properties
+        const person1 = {
+        name: "Musab"
+        };
+        person1.name = "Ahmad";
+        console.log(person1);
+
+
+
+        // Adding Properties
+        const person2 = {
+        name: "Musab"
+        };
+        person2.age = 22;
+        console.log(person2);
+
+
+        //Deleting Properties
+        const person3 = {
+        name: "Musab",
+        age: 22
+        };
+        delete person3.age;
+        console.log(person3);
+
+
+
+        // Methods
+        // A function inside an object is called a method.
+        const person4 = {
+            name: "Musab",
+            greet: function() {
+                console.log("Hello, I am " + this.name);
+            }
+        };
+        person4.greet();
+
+
+
+
+        // Nested Objects
+         const person5 = {
+            name: "Musab",
+            address: {
+                country: [undefined]
+            }
+         };
+         console.log("================");
+         console.log(person5.address.city); // undefined
+         console.log(person5.address.country.length);
+
+
+
+
+        // Object.keys() and Object.values() and Object.entries()
+        // Returns all keys.
+        // Returns all values.
+        // Returns all key-value pairs.
+        const person6 ={
+            name: "Musab",
+            age: 22
+        }
+        console.log("================");
+        console.log(Object.keys(person6))
+        console.log(Object.values(person6))
+        // for iterate through object
+        console.log(Object.entries(person6))
+        for(const [key, value] of Object.entries(person6)){
+            console.log(`${key}: ${value}`)
+        } // for(const [key, value] of Object.entries(person6])
+
+
+
+
+        // Spread Operator
+        const person7 = {
+            name: "Musab",
+            age: 22
+        };
+        const person8 = {
+            ...person7,
+            city: "Gujranwala"
+        };
+        console.log(person8);
+        // Spread Operator for updating
+        const person9 = {
+            ...person7,
+            age: 23
+        };
+        console.log(person9);
+
+
+
+
+
+
+        // Object Reference
+        // Arrays and objects are reference types.
+        const obj1 = {
+            name: "Ahmad"
+        }
+        const obj2 = obj1
+        obj2.name = "Bilal"
+        console.log(obj1);
+        console.log(obj2);
+
+
+
+        // Shallow Copy
+        const obj3 = {
+        name: "Musab"
+        };
+        const obj4 = { ...obj3 };
+        obj4.name = "Ahmad";
+        console.log(obj3.name);
+        // problem with shallow copy
+        // nested objects are still referenced.
+        const obj5 = {
+            name: "Musab",
+            address: {
+                city: "Gujranwala"
+            }
+        };
+        const obj6 = { ...obj5 };
+        obj6.address.city = "Lahore";
+        console.log(obj5.address.city);
+
+        // Deep Copy 
+        // Creates completely separate nested objects.
+        const person10 = {
+        name: "Musab",
+        address: {
+            city: "Gujranwala"
+        }
+        };
+        const copy = structuredClone(person10);
+        copy.address.city = "Lahore";
+        console.log(person10.address.city);
+
+
+
+
+        // Constructor Functions
+        function Student(name, age) {
+        this.name = name;
+        this.age = age;
+        }
+        const s1 = new Student("Ali", 20);
+        const s2 = new Student("Ahmad", 22);
+        console.log(s1.name);
+        console.log(s2.age);
+
+
+
+        // Prototype
+        // Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+        // Prototype create only one copy for all rather then seperate 
+        function Student(name) {
+        this.name = name;
+        }
+        Student.prototype.sayHello = function () {
+        console.log("Hello");
+        };
+        const s3 = new Student("Ali");
+        const s4 = new Student("Ahmad");
+        s3.sayHello();
+        s4.sayHello();
+        console.log("Has Prototype")
+        console.log(Student.hasOwnProperty("name"))
+
+
+        // Object vs JSON
+        // Object is a data type in JavaScript while JSON is data format
+        // Objects can contain functions and undefined values, while JSON cannot.
+        // Object use for internal use while JSON use for external(API) use
+
+
+        console.log("=========Freeze()")
+        // Freeze() method is used to freeze an object. This means that you can no longer add, remove, or modify its properties.
+        // It only freeze the first level of object.
+        const user = {
+        name: "Musab",
+        subjects: ["Math", "Science", "English"]
+        };
+        Object.freeze(user);
+        user.name = "Ali"; // not change
+        user.subjects[0] = "Physics"; // changable
+        console.log(user.subjects[0]);
+        console.log(user.name);
+
+
+
+        console.log("=========Seal()")
+        // Seal() method is used to seal an object. This means that you can no longer add or remove properties, but you can still modify the existing ones.
+        const user1 = {
+            name: "Musab"
+        };
+        Object.seal(user1);
+        user1.name = "Ali";      // allowed
+        user1.age = 22;          // not allowed
+        console.log(user1);
+
+
+
+
+        console.log("=========Assign()")
+        // Assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object.
+        // Object.assign() makes a shallow copy. Nested objects are still shared.
+        const obj = { a: 1, b: { c: 1 } };
+        const copy = Object.assign({}, obj);
+        copy.b.c = 100;
+        console.log(obj);
+        console.log(copy);
+
+
+
+        console.log("=========Create()")
+         // Create() method is used to create a new object with the specified prototype object and properties.
+         // it creates new empty object but hidden link with parent
+         const proto ={
+            role: "Admin"
+         }
+         console.log(proto.role)
+         const account = Object.create(proto);
+         console.log(account.role)
+        
+    </script>
+</body>
+</html>`    

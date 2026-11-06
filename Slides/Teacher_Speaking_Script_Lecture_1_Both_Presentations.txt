@@ -1,0 +1,784 @@
+TEACHER'S SPEAKING SCRIPT
+WEB DEVELOPMENT — LECTURE 1
+Based on both PowerPoint presentations supplied
+
+HOW TO USE THIS SCRIPT
+These are speaking notes. You do not need to read every sentence exactly. Explain slowly, show the slide, use the examples, and pause for questions. The order below follows your slides.
+
+============================================================
+PRESENTATION 1 — INTRODUCTION TO WEB DEVELOPMENT
+============================================================
+
+SLIDE 1 — INTRODUCTION TO WEB DEVELOPMENT
+
+Say:
+"Assalam-o-Alaikum everyone. Welcome to our first Web Development lecture.
+
+You do not need any previous programming knowledge for this class. We are starting from the basics.
+
+You all use websites every day, such as Google, YouTube, Facebook and online shopping websites. But have you ever wondered how these websites are created? How does a page appear when you type an address in your browser? And how does a button respond when you click it?
+
+That is what we are going to learn.
+
+Today, we will understand the Internet and the Web, how websites work, the main parts of Web Development, and finally create our first small HTML page."
+
+Transition:
+"Before learning how to create websites, let's understand what the Internet and the Web actually are."
+
+SLIDE 2 — WHAT YOU WILL LEARN
+
+Say:
+"These are our goals for today.
+
+First, understand the difference between the Internet and the Web.
+
+Second, understand what happens when you open a website. We will keep that explanation simple today and learn the networking details in Part 2.
+
+Third, learn the main technologies used in Web Development: HTML, CSS and JavaScript. We will also introduce frontend and backend.
+
+Finally, create and open a simple HTML page.
+
+You do not need to memorize every technical word today. I want you to understand the ideas and explain them in your own words."
+
+Ask:
+"How many of you have used Google or YouTube today?"
+
+Transition:
+"Let's understand the technology that makes these services possible."
+
+SLIDE 3 — THE INTERNET AND THE WEB
+
+Say:
+"People often use the words Internet and Web as if they mean the same thing, but they are not exactly the same.
+
+The Internet is a worldwide network that connects computers, phones, servers and many other devices. It provides the infrastructure through which devices exchange data.
+
+The World Wide Web, or Web, is a system of websites and linked pages that we access using the Internet.
+
+For example, when you open Google or YouTube in Chrome, you are using the Web.
+
+Think of the Internet as a road network and the Web as one service that uses those roads.
+
+The Internet also supports other services, such as email, online gaming and other communication services. So the Web is one part of what the Internet is used for."
+
+Ask:
+"Are the Internet and the Web exactly the same thing?"
+Expected answer: "No. The Web uses the Internet."
+
+Transition:
+"Now let's look at websites and web applications."
+
+SLIDE 4 — WEBSITES AND WEB APPLICATIONS
+
+Say:
+"Both websites and web applications can open in a browser. A simple way to distinguish them is to look at what people mainly do there.
+
+A traditional website often focuses on presenting information. For example, a school website may show its programs, contact details, announcements and other information.
+
+A web application lets users perform tasks and interact with data. For example, an email application lets you sign in, send messages, receive messages and manage your inbox. An online banking application lets you check information and perform banking tasks.
+
+Remember, this is a beginner-friendly distinction. Modern websites can also be interactive, so these categories can overlap."
+
+Ask:
+"Would you consider an online email service a website or a web application? Why?"
+
+Transition:
+"Now let's understand what happens behind the scenes when you open a website."
+
+SLIDE 5 — WHAT HAPPENS WHEN YOU OPEN A WEBSITE?
+
+Say:
+"Imagine you open Chrome and type a website address.
+
+First, you enter the address in your browser. The browser sends a request to the website's server.
+
+A server is a computer or program that receives requests and provides responses.
+
+The server processes the request and sends a response back. Finally, the browser receives the response and displays the page.
+
+For example, imagine you visit a school website and ask for its homepage. Your browser is effectively asking the server: 'Please send me the homepage.'
+
+The server sends the required content, and the browser displays it.
+
+Remember two important words: request and response. A request is what the client sends. A response is what the server sends back."
+
+Ask:
+"Which one sends the request: the browser or the server?"
+Expected answer: "The browser."
+
+Transition:
+"Now let's see how data travels from your device towards the website's server."
+
+SLIDE 6 — HOW DATA TRAVELS ACROSS THE INTERNET
+
+Say:
+"Imagine you are at home using your laptop.
+
+Your laptop connects to your home network. If you are using Wi-Fi, it connects wirelessly to your router.
+
+The router helps connect your home network to other networks. Your Internet Service Provider, or ISP, provides your Internet connection.
+
+Your ISP connects with other networks, and traffic travels towards the server you want to reach.
+
+The server sends a response back through the network, and your device receives it.
+
+For now, remember the basic journey: your device, router, Internet provider, connected networks and website server.
+
+We will explore these networking components in more detail in Part 2."
+
+Ask:
+"What device do you normally use to connect your home devices to Wi-Fi?"
+Expected answer: "A Wi-Fi router."
+
+Transition:
+"Before going further, let's understand some words we will use throughout this course."
+
+SLIDE 7 — KEY TERMS: BROWSER, SERVER, DOMAIN AND HOSTING
+
+Say:
+"Let's understand five important terms.
+
+A browser is software that lets us access and view websites. Chrome, Firefox and Edge are examples.
+
+A client is the device or software making a request. In our example, the browser running on your laptop is the client.
+
+A server is a computer or program that provides a response to a client's request.
+
+A domain name is a readable website address, such as example.com. It is easier for people to remember than an IP address.
+
+Hosting is a service that provides the infrastructure needed to make a website available online.
+
+For example, imagine you create a personal portfolio website. You write its HTML, CSS and JavaScript files. To make it available to other people on the Internet, you publish it using a hosting service."
+
+Ask:
+"Can you name two web browsers?"
+Expected answers: "Chrome, Firefox, Edge or Safari."
+
+Transition:
+"Now let's look at how the browser and server communicate."
+
+SLIDE 8 — HTTP AND HTTPS
+
+Say:
+"HTTP stands for Hypertext Transfer Protocol. You do not need to memorize the full name immediately. Understand its purpose.
+
+HTTP is a set of rules that allows a browser and a web server to communicate. The browser sends an HTTP request, and the server sends an HTTP response.
+
+HTTPS is HTTP communication protected using TLS encryption.
+
+Imagine you are entering your login details on a website. You want to protect that information while it travels between your browser and the server. HTTPS helps protect that communication.
+
+You may have noticed that many website addresses begin with https://.
+
+One important point: HTTPS helps protect the connection, but it does not automatically mean that every website is honest or safe."
+
+Ask:
+"What does HTTPS add?"
+Expected answer: "Protection through TLS."
+
+Transition:
+"Now let's look at the three main technologies used to create the frontend."
+
+SLIDE 9 — THREE TECHNOLOGIES BUILD THE FRONTEND
+
+Say:
+"Whenever you open a website, you see text, images, headings, buttons, colors and layouts.
+
+Three important technologies help developers create the frontend: HTML, CSS and JavaScript.
+
+Imagine building a house.
+
+First, you need the structure: walls, rooms, doors and windows. That is like HTML. HTML defines the structure and content of a webpage, such as headings, paragraphs, links, images and buttons.
+
+Next, you decorate the house with colors and design. That is like CSS. CSS controls the appearance of a webpage: colors, fonts, spacing and layout.
+
+Finally, imagine things responding when someone interacts with them. In a website, JavaScript adds behavior. It can respond to clicks, validate forms and change content.
+
+Remember: HTML is structure, CSS is appearance, and JavaScript is behavior.
+
+Today we will create a basic HTML page. We will study CSS and JavaScript in later lessons."
+
+Ask:
+"If I want to change the background color of a webpage, which technology would I normally use?"
+Expected answer: "CSS."
+
+Transition:
+"These technologies are used on the frontend. But what about the backend?"
+
+SLIDE 10 — FRONTEND, BACKEND AND FULL-STACK
+
+Say:
+"Web Development has two major areas that we will study: frontend and backend.
+
+Frontend is the part of an application that users see and interact with. On an online shopping website, product images, search bars, buttons, menus and forms are parts of the frontend.
+
+Backend handles server-side logic and data. Imagine you sign in to an application. The frontend provides the login form. The backend can receive the login information, check it and return a result. The backend also works with databases to store and retrieve information.
+
+In this course, we will learn HTML, CSS, JavaScript and Vue.js for frontend development, and Node.js, Express.js and MongoDB for backend development and data storage.
+
+Full-stack development means working across both frontend and backend parts of an application."
+
+Ask:
+"If I create a login form that users can see, is that frontend or backend?"
+Expected: "Frontend."
+"And if the server checks the login details?"
+Expected: "Backend."
+
+Transition:
+"Now let's see the tools we will use to write, run and manage our code."
+
+SLIDE 11 — TOOLS WE WILL USE
+
+Say:
+"First, Visual Studio Code, usually called VS Code. It is a code editor where we will write and organize HTML, CSS and JavaScript files.
+
+Second, Google Chrome. It is a browser where we can open and test our websites.
+
+Third, Chrome DevTools. These are built-in browser tools that help developers inspect and debug webpages. If you open a website, right-click and choose Inspect, Chrome opens DevTools. You can inspect the HTML and CSS used by the page.
+
+Next is Git. Git is a version control system. It helps us track changes in our code.
+
+Finally, GitHub. GitHub is a platform where we can store and share Git repositories and collaborate with other developers.
+
+We will learn Git and GitHub in more detail later. Today, just remember what each tool is used for."
+
+Demonstration:
+"Open Chrome, visit a website, right-click and select Inspect. Show the Elements panel briefly."
+
+Transition:
+"Now comes the practical part. Let's create our first webpage."
+
+SLIDE 12 — YOUR FIRST HTML PAGE
+
+Say:
+"Open VS Code and create a new file named index.html. This is a commonly used default filename for a website's main page.
+
+Let's go through the code from top to bottom."
+
+Explain each line:
+
+<!DOCTYPE html>
+"This tells the browser that this document uses HTML5. It is called a doctype declaration."
+
+<html>
+"This is the root element. The rest of our HTML document is placed inside it."
+
+<head>
+"The head contains information about the document. This information is not normally displayed as the main content of the webpage."
+
+<title>My First Website</title>
+"This sets the title shown in the browser tab."
+
+</head>
+"This closes the head section."
+
+<body>
+"The body contains the content that appears on the webpage."
+
+<h1>Hello World!</h1>
+"This creates a main heading. The text between the opening and closing tags is displayed as a heading."
+
+<p>Welcome to Web Development.</p>
+"This creates a paragraph."
+
+<button>Click Me</button>
+"This creates a button. Notice that the button is visible, but it does not perform an action yet. We will learn how to add functionality using JavaScript later."
+
+</body> and </html>
+"These closing tags finish the body and the HTML document."
+
+Practical:
+"Save the file and open it in Chrome. You should see the heading, paragraph and button. Change the heading in VS Code, save the file and refresh the browser. Notice that the browser now displays the updated text. That's your first webpage."
+
+Transition:
+"Let's repeat these steps ourselves so everyone gets a chance to create the page."
+
+SLIDE 13 — PRACTICE AND REVIEW
+
+Say:
+"Now it's your turn.
+
+Create a folder for today's lesson. Inside that folder, create a file named index.html.
+
+Write the example code we just discussed and save it. Open the file in Chrome.
+
+Change the heading to your own name. Add a short introduction about yourself. Keep the button, but change its text to 'My First Button'.
+
+Save the file and refresh the browser to see your changes.
+
+For homework, make sure you have VS Code and Chrome ready. Complete this small page if you have not finished it in class.
+
+In our next lesson, we will study HTML document structure and more HTML elements."
+
+============================================================
+PRESENTATION 2 — LECTURE 1, PART 2:
+INTERNET NETWORKS AND WEB REQUESTS
+============================================================
+
+SLIDE 1 — INTERNET NETWORKS AND WEB REQUESTS
+
+Say:
+"Welcome back.
+
+In Part 1, we learned what the Internet and the Web are, what a browser and server do, and how a browser sends a request and receives a response.
+
+Now we are going one step further. We will follow the journey of a request from your device to a website and back again.
+
+To understand that journey, we need a few networking concepts: IP addresses, MAC addresses, routers, switches, DNS, URLs, HTTP and HTTPS.
+
+Don't worry if these words are new. We will understand each one using simple examples."
+
+Transition:
+"Before looking at individual devices and addresses, let's quickly understand how the Internet grew."
+
+SLIDE 2 — THE INTERNET GREW AS NETWORKS CONNECTED
+
+Say:
+"Let's look at a few important events in Internet history.
+
+In 1969, ARPANET connected its first four computers. This was an important early computer network.
+
+During the 1970s, researchers developed the foundations of TCP/IP. These protocols made it possible for different networks to communicate using common rules.
+
+In 1983, ARPANET adopted TCP/IP. This was a major milestone in the development of the modern Internet.
+
+In 1986, the National Science Foundation began NSFNET, which helped connect academic and research networks.
+
+Then, in 1989, Tim Berners-Lee proposed the World Wide Web.
+
+Notice something important: the underlying Internet networking developed before the Web was proposed.
+
+The Internet is the network infrastructure. The Web is a service that uses that infrastructure."
+
+Ask:
+"Did the World Wide Web exist before the Internet?"
+Expected: "No. The underlying Internet came first."
+
+Transition:
+"Now let's understand how separate networks became connected."
+
+SLIDE 3 — THE INTERNET IS A NETWORK OF NETWORKS
+
+Say:
+"Imagine University A has 100 computers. The university connects its computers so they can communicate with each other. This is called a local area network, or LAN.
+
+University B does the same thing. Now we have two separate university networks.
+
+How can these two universities communicate?
+
+Their networks can connect to larger networks. A regional network can connect several local networks. Larger backbone networks can carry traffic across wider areas.
+
+Look at the diagram. University A has its own computers and server. Its local network connects to a regional network. That regional network connects to a backbone, and the backbone provides connections to other networks, including University B.
+
+Think of a backbone like a major highway. Small roads connect houses to larger roads. Larger roads connect towns, and highways connect regions. In a similar way, smaller networks connect to larger networks.
+
+Separate networks also need shared communication rules to exchange data. TCP/IP provides the foundation for this communication."
+
+Ask:
+"Does every university need a separate direct connection to every other university?"
+Expected: "No. Networks can connect through larger networks."
+
+Transition:
+"These networks also need physical connections to carry data. Let's look at those."
+
+SLIDE 4 — PHYSICAL LINKS CARRY DATA BETWEEN PLACES
+
+Say:
+"When we say computers are connected through the Internet, it does not mean data magically travels from one country to another. There is physical infrastructure behind it.
+
+One important example is fiber-optic cable. Fiber-optic cables carry data using light through very thin strands of glass or similar material. They can carry large amounts of data over long distances.
+
+Some fiber-optic cables run underground, across cities and under oceans. These undersea cables connect countries and continents.
+
+Telecommunications companies also operate networks and other communication links.
+
+Another important part is data centers. A data center is a building or facility that contains servers, storage systems and networking equipment. Websites and online services use servers hosted in data centers.
+
+Finally, satellite links are useful in some locations, especially where other types of connectivity are difficult.
+
+Different organizations build and operate different parts of this infrastructure. No single organization has to build every connection."
+
+Ask:
+"How can data travel between two countries?"
+Expected: "Through infrastructure such as undersea fiber-optic cables, telecom networks and other links."
+
+Transition:
+"Now we know that physical networks connect places. But who provides Internet access to our homes?"
+
+SLIDE 5 — ISPs CONNECT THEIR NETWORKS
+
+Say:
+"ISP stands for Internet Service Provider.
+
+An ISP is a company or organization that provides Internet connectivity to homes, businesses and other customers. When you subscribe to an Internet package at home, you are getting connectivity through an ISP.
+
+Let's follow the diagram.
+
+Your laptop connects to your home Wi-Fi. Your home connection reaches your ISP. Your ISP connects to other networks. Those networks can exchange traffic through arrangements such as peering or transit. An Internet Exchange Point can also provide a place where networks connect and exchange traffic.
+
+Peering means two networks agree to exchange traffic directly.
+
+Transit means one network pays another network to carry its traffic to destinations it cannot reach through its own connections.
+
+An Internet Exchange Point, or IXP, is a place where different networks connect and exchange traffic. Think of it as a meeting point for networks.
+
+The diagram is simplified. In real life, your data may pass through several networks before reaching a website."
+
+Ask:
+"What does ISP stand for?"
+Expected: "Internet Service Provider."
+"Does your ISP need to own every website you visit?"
+Expected: "No. It connects to other networks to reach those websites."
+
+Transition:
+"If many organizations operate networks, does one organization own the entire Internet? Let's find out."
+
+SLIDE 6 — NO SINGLE ORGANIZATION OWNS THE WHOLE INTERNET
+
+Say:
+"Here is an important question: who owns the Internet? Is it Google? Is it one government? Is there one company that controls every cable, server and router?
+
+No. No single organization owns the entire Internet.
+
+Different organizations own and operate different networks and infrastructure. Some organizations also coordinate important technical functions and standards.
+
+ICANN coordinates the global Domain Name System and unique Internet identifiers.
+
+IETF develops technical standards and protocols that help different systems communicate.
+
+Internet Society, or ISOC, supports an open and globally accessible Internet.
+
+APNIC manages Internet number resources, including IP addresses, for the Asia-Pacific region.
+
+These organizations have different responsibilities. They do not own the whole Internet.
+
+The main idea is: many operators, shared standards and interconnected networks."
+
+Ask:
+"Does ICANN own the entire Internet?"
+Expected: "No. It coordinates specific Internet functions."
+
+Transition:
+"Now let's look at two devices that help data move around local networks: switches and routers."
+
+SLIDE 7 — ROUTER, SWITCH AND WI-FI HAVE DIFFERENT JOBS
+
+Say:
+"People often think a router, switch and Wi-Fi are the same thing. They are not.
+
+First, a switch. A network switch connects devices inside a local network. For example, in a computer lab, many desktop computers can connect to one switch using network cables.
+
+Second, a router. A router connects different IP networks and forwards traffic between them. Your home router connects your home network to your ISP's network.
+
+Third, Wi-Fi. Wi-Fi is a wireless technology that allows devices to connect to a network without using an Ethernet cable.
+
+Here is something important: the device we call a home Wi-Fi router often combines several functions. It may include a router, a small network switch and a Wi-Fi access point in one box.
+
+So don't think that Wi-Fi itself is the router. They perform different jobs."
+
+Ask:
+"Which device connects several wired computers inside a local network?"
+Expected: "A switch."
+"Which device forwards traffic between different IP networks?"
+Expected: "A router."
+
+Transition:
+"Now that we understand the devices, let's learn how network devices are identified."
+
+SLIDE 8 — IP AND MAC ADDRESSES WORK AT DIFFERENT LEVELS
+
+Say:
+"Computers need addresses to communicate. Two important types of addresses are IP addresses and MAC addresses.
+
+IP stands for Internet Protocol. An IP address helps identify the source and destination of data when devices communicate using IP.
+
+For example, an IPv4 address can look like 192.168.1.10.
+
+Think of an IP address like the address on a parcel. It helps identify where the data should go.
+
+Now let's look at a MAC address. MAC stands for Media Access Control.
+
+A MAC address is associated with a network interface and is used for communication over a local network link. For example, it may look like A4:5E:60:C1:23:9F.
+
+Think about a university building. The IP address helps identify where traffic is going across networks, while the MAC address helps with delivery over the local network link.
+
+Remember, the analogy is only to help you understand. IP and MAC addresses work at different networking layers and are not exactly the same as postal addresses.
+
+When data travels across multiple networks, routers use IP information to forward packets. On each local link, MAC addresses are used for link-layer delivery."
+
+Ask:
+"What is the main difference between an IP address and a MAC address?"
+Expected: "IP is used for communication across IP networks, while MAC is used for local-link delivery."
+
+Transition:
+"People use website names, but networks need IP addresses. How do we connect those two? That's where DNS comes in."
+
+SLIDE 9 — DNS LOOKS UP THE ADDRESS FOR A DOMAIN
+
+Say:
+"DNS stands for Domain Name System.
+
+Imagine you want to visit Google. You type google.com into your browser.
+
+People find names like google.com easy to remember. But network communication needs an IP address for the destination.
+
+DNS helps find the IP address associated with a domain name.
+
+Think about the contacts list on your phone. You search for someone's name instead of remembering their phone number.
+
+DNS works in a similar way: you provide a domain name, and DNS helps find the corresponding address.
+
+A DNS resolver performs this lookup. It may be provided by your Internet provider or by another DNS service.
+
+Once your device gets the DNS result, the browser can use the IP address to connect to the website.
+
+One important point: DNS does not host the website. It only helps find the address. The website's content is provided by the website's server."
+
+Ask:
+"Does DNS store and display the actual website pages?"
+Expected: "No. DNS helps find the IP address."
+
+Transition:
+"Now we understand DNS. Let's look at the address we type into the browser."
+
+SLIDE 10 — A URL HAS PARTS THAT TELL THE BROWSER WHAT TO REQUEST
+
+Say:
+"URL stands for Uniform Resource Locator.
+
+A URL is the address used to locate a resource on the Web.
+
+Look at this example: https://www.google.com/search.
+
+We can divide it into three parts for now.
+
+First, the scheme: https://. This tells the browser which protocol to use to access the resource.
+
+Second, the host or domain: www.google.com. This identifies the host the browser wants to reach.
+
+Third, the path: /search. This identifies the resource or route being requested on that host.
+
+So don't treat a URL as one long random text. It has different parts, and each part has a purpose.
+
+URLs can contain other parts too, such as query parameters and fragments. We will learn those later."
+
+Ask:
+"Which part is the domain?"
+Expected: "www.google.com."
+"Which part is the path?"
+Expected: "/search."
+
+Transition:
+"Now let's put everything together. What happens after you press Enter in the browser?"
+
+SLIDE 11 — WHAT HAPPENS AFTER YOU ENTER A URL?
+
+Say:
+"This is one of the most important slides because it connects the concepts we have just learned.
+
+Imagine you type https://www.example.com into Chrome and press Enter.
+
+Step one: the browser reads the URL. It identifies the scheme, host and path.
+
+Step two: DNS resolves the host. The browser or operating system needs an IP address for the domain. DNS helps find that address.
+
+Step three: your device sends traffic. It uses its local network. The traffic goes through your router and ISP, and then through connected networks towards the destination.
+
+Step four: the server receives a request. The browser communicates with the server using HTTP or HTTPS.
+
+Step five: the server sends a response. The browser receives the content and displays the webpage.
+
+Remember the overall journey: read the URL, find the IP address, send traffic, communicate with the server, receive a response and display the page.
+
+This is a simplified explanation. DNS results can be cached and connections can be reused."
+
+Ask:
+"What does DNS do in this process?"
+Expected: "It helps find the IP address for the domain."
+
+Transition:
+"Now let's look more closely at the request and response messages."
+
+SLIDE 12 — HTTP REQUEST AND RESPONSE
+
+Say:
+"HTTP is based on a request-and-response model. The browser sends a request to the server, and the server sends a response back.
+
+Look at the request example: GET /search.
+
+This means the browser is asking for the /search resource using the GET method.
+
+The Host header identifies the website host.
+
+In simple words, the browser is saying: 'Please send me the search page from this website.'
+
+Now look at the response: HTTP/1.1 200 OK.
+
+This tells us that the request was successful.
+
+Content-Type: text/html tells the browser what type of content is being returned. In this example, it is HTML.
+
+Let's understand three status codes.
+
+200 means the request was successful.
+
+404 means the requested resource was not found.
+
+500 means the server encountered an internal error while handling the request.
+
+You will see these status codes frequently when working with APIs and backend development."
+
+Ask:
+"What does status code 404 mean?"
+Expected: "Not Found."
+
+Transition:
+"HTTP explains how the messages work. But how do we protect the information being exchanged? That's HTTPS."
+
+SLIDE 13 — HTTPS PROTECTS THE CONNECTION WITH TLS
+
+Say:
+"HTTP defines the rules for communication between the browser and server. But HTTP alone does not encrypt the connection.
+
+Imagine you are entering your password on a website. You want to protect that information while it travels across the network.
+
+HTTPS uses TLS to protect the communication.
+
+TLS stands for Transport Layer Security.
+
+In simple terms, TLS helps encrypt data while it travels between the browser and server. It also helps protect data integrity and authenticate the server through its certificate.
+
+Think of it like sending a message inside a locked box. Someone who intercepts the box should not be able to read the protected message.
+
+HTTPS is important, especially when websites handle passwords, personal information or payments.
+
+But remember: HTTPS does not automatically prove that a website is honest. A fraudulent website can also use HTTPS. It protects the connection, not the honesty of the website."
+
+Ask:
+"What does TLS stand for?"
+Expected: "Transport Layer Security."
+"Does HTTPS guarantee that a website is trustworthy?"
+Expected: "No. It protects the connection, but it does not guarantee the website's honesty."
+
+Transition:
+"Now let's bring all these concepts together in one example."
+
+SLIDE 14 — ONE VISIT BRINGS THE CONCEPTS TOGETHER
+
+Say:
+"Imagine you are at home using your laptop and you open a website.
+
+First, your browser runs on your device. Your device is connected to your local network and has an IP address.
+
+Your device sends traffic towards the router.
+
+The router forwards traffic towards your ISP and other connected networks.
+
+Before the browser can connect to the website's host, DNS helps it find the host's IP address. Remember, DNS is a lookup service. It is not necessarily another router or a physical stop in the same path.
+
+Once the browser has the address, it can connect to the web server.
+
+The browser sends an HTTP request. If the URL uses HTTPS, the communication is protected by TLS.
+
+The server processes the request and sends a response.
+
+The browser receives the response and renders the HTML. It may also request other resources such as CSS, JavaScript and images.
+
+So all the concepts we learned are connected: IP addresses, routers, networks, DNS, URLs, HTTP and HTTPS."
+
+Ask:
+"Can someone explain the journey in their own words, starting from the laptop?"
+
+Give students time to answer. Help them follow the order shown in the slide.
+
+Transition:
+"Let's check what we have understood."
+
+SLIDE 15 — CHECK YOUR UNDERSTANDING: NETWORKS
+
+Say:
+"Now I want you to answer these questions in your own words. You do not need complicated definitions.
+
+One: How did separate university networks become connected?
+
+Two: What is the difference between an IP address and a MAC address?
+
+Three: What does a router do, and how is a switch different?
+
+Four: What is peering? What is an Internet Exchange Point?
+
+Five: Does one company own the whole Internet?
+
+Take a few minutes to think about your answers. I want you to explain the concepts rather than simply repeat a definition."
+
+Instructor answer guide:
+1. Networks connected through regional networks, backbones and shared protocols.
+2. IP addresses support communication across IP networks; MAC addresses support local-link delivery.
+3. A switch connects devices in a LAN; a router forwards traffic between IP networks.
+4. Peering is an agreement to exchange traffic directly; an IXP is a place where networks connect and exchange traffic.
+5. No single organization owns the entire Internet.
+
+Transition:
+"Good. Now let's check the concepts related to websites and web requests."
+
+SLIDE 16 — CHECK YOUR UNDERSTANDING: WEB REQUESTS
+
+Say:
+"Here are five more questions.
+
+Six: Why does a browser use DNS? Does DNS host website pages?
+
+Seven: Which parts of a URL are the scheme, host and path?
+
+Eight: What is the difference between an HTTP request and an HTTP response?
+
+Nine: What does HTTPS add, and what is TLS?
+
+Ten: What does an HTTP status code tell us?
+
+Let's review the answers.
+
+DNS helps find the IP address for a domain. It does not host website pages.
+
+In a URL, the scheme tells the browser how to connect, the host identifies the destination host, and the path identifies the requested resource or route.
+
+An HTTP request is sent by the client to the server. An HTTP response is sent by the server back to the client.
+
+HTTPS protects HTTP communication using TLS.
+
+An HTTP status code summarizes the result of the request. For example, 200 means success, 404 means not found, and 500 means server error.
+
+In our next lesson, we will start HTML in more detail. We will learn HTML document structure, elements, tags, attributes and how to create different types of content on a webpage.
+
+Before the next class, review today's concepts and try to explain what happens when you type a website address into your browser.
+
+Thank you, everyone."
+
+============================================================
+IMPORTANT NOTES FOR THE INSTRUCTOR
+============================================================
+
+1. DO NOT RUSH
+Some students may never have heard terms such as server, router, DNS or IP address. Pause and explain them with examples.
+
+2. DO NOT TEACH EVERY ADVANCED DETAIL
+These slides are introductory. Avoid going deeply into routing protocols, subnetting, DNS record resolution, TLS cryptography or network layers unless students ask and are ready.
+
+3. KEEP THE MAIN STORY CONNECTED
+Use one example throughout: a student opens a browser, types a website address, the browser finds the destination, sends a request, receives a response and displays the page.
+
+4. CHECK UNDERSTANDING
+Ask students to explain ideas in their own words. Explaining a concept with a simple example is a better sign of understanding than memorizing its definition.
+
+5. IMPORTANT DISTINCTIONS
+- Internet and Web are not the same.
+- A website and a web application can overlap.
+- A browser is the client in the examples used here.
+- A router and a switch have different jobs.
+- Wi-Fi is a wireless networking technology, not another name for a router.
+- IP and MAC addresses are used at different networking levels.
+- DNS finds addresses; it does not host website pages.
+- HTTP is the request-response protocol; HTTPS protects it using TLS.
+- HTTPS protects the connection but does not guarantee that a website is honest.
+
+END OF TEACHER'S SPEAKING SCRIPT

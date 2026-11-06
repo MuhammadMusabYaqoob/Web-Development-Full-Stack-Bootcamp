@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+
+<script>
+    // ===============================
+    // FUNCTIONS
+    // ===============================
+
+    // 1. FUNCTION DECLARATION
+    function greet() {
+        console.log("Hello, World!");
+    }
+    // 2. FUNCTION CALLING
+    greet(); // Output: Hello, World!
+    // Hoisted to the top of the scope
+    // Can be called before declaration
+    console.log("========calling_before_declaration==============")
+    calling_before_declaration()
+    function calling_before_declaration(){
+        console.log("Calling before declaration");
+    }
+
+
+
+    console.log("========FUNCTION WITH PARAMETERS==============")
+    // 3. FUNCTION WITH PARAMETERS
+    function greetUser(name) {
+        if(typeof name === "string"){
+            console.log("Hello, " + name + "!");
+        }else{
+            console.log("Please enter a valid name");
+        }
+    }
+    greetUser("Ali"); // Output: Hello, Musab!
+
+
+
+
+    console.log("========WITH RETURN VALUE==============")
+    // 4. FUNCTION WITH RETURN VALUE
+    // Parameter is a variable that is used to pass data to a function and it is flexible
+    // Aguments are the actual values that are passed to the function during calling
+    // Extra arguments are ignored
+    function add(a, b) {
+        if( typeof a === "number" && typeof b === "number"){
+            return a + b;
+        }else{
+            console.log("Please enter a valid number");
+        }
+    }
+    console.log(add(3, 5)); // Output: 8
+    console.log(add(3.5, 5.5)) // Output: 9
+    console.log(add(3, 5, 6)); // Output: 8  here 6 will ignore
+    console.log(add("3", 5)); // Output: undefined
+    console.log(add(3, "5")); // Output: undefined
+    console.log(add(3, null)) // Output: undefined
+
+    console.log("========Regular Function have argument Object while ARROW FUNCTION NOT==============")
+    function show() {
+    console.log(arguments);
+    }
+    show(1, 2, 3, 4);
+    // Show Error
+    // const show = () => {
+    // console.log(arguments);
+    // };
+
+
+
+    console.log("========FUNCTION EXPRESSION==============")
+    // 5. FUNCTION EXPRESSION(Store a function inside a variable)
+    // Not Hoisted like function declaration
+    const multiply = function (a, b) {
+        return a * b;
+    };
+    console.log(multiply(4, 6)); // Output: 24
+    // // Error
+    // console.log(multiply_f(4, 6));
+    // const multiply_f = function (a, b) {
+    //     return a * b;
+    // };
+    
+
+
+
+
+    // // 6. ARROW FUNCTION
+    // // ARROW FUNCTION have no this keyword
+    // // ARROW FUNCTION have no arguments object
+    // const divide = (a, b) => {
+    //     return a / b;
+    // };
+    // console.log(divide(10, 2)); // Output: 5
+    // // without curly braces
+    // const div = (a, b) => a / b;
+    // console.log(div(10, 2)); // Output: 5
+    // const square = (a) => a * a;
+    // console.log(square(5)); // Output: 25) 
+    // // Arrow function with this keyword
+    // const user = {
+    // name: "Musab",
+
+    // show: () => {
+    //     console.log(this.name);
+    // }
+    // };
+    // user.show();
+    // // Regular function with this keyword
+    // const user_name = {
+    // name: "Musab",
+    // show() {
+    //     console.log(this.user_name);
+    // }
+    // };
+    // user_name.show();
+
+
+
+
+    // // 7. DEFAULT PARAMETERS
+    // function greetUser(name = "Guest") {
+    //     console.log(`Hello, ${name}!`);
+    // }
+    // greetUser(); // Output: Hello, Guest!
+    // greetUser("Musab"); // Output: Hello, Musab!
+
+
+
+    // // 8. Anonymous Function
+    // // A function without a name
+    // // Used in callbacks and event handlers
+    // // Example:
+    // setTimeout(function () {
+    //     console.log("This is an anonymous function!");
+    // }, 1000); // Output: This is an anonymous function! (after 1 second)
+
+
+
+
+
+    // // 9. IIFE (Immediately Invoked Function Expression)
+    // // A function that is executed immediately after it is defined
+    // // Example:
+    // (function () {
+    //     console.log("This is an IIFE!");
+    // })(); // Output: This is an IIFE!
+    // // With Parameters
+    // (function (a, b) {
+    //     console.log(a + b);
+    // })(3, 5); // Output: 8
+    // // ARROW FUNCTION
+    // (() => {
+    //     console.log("This is an IIFE!");
+    // })(); // Output: This is an IIFE!
+
+
+
+
+    // //10. Call Back Function
+    // // A function that is passed as an argument to another function and execute after task complete
+    // function greet(name, callback) {
+    //     console.log(`Hello, ${name}!`);
+    //     callback();
+    // }
+    // function sayGoodbye() {
+    //     console.log("Goodbye!");
+    // }
+    // greet("Musab", sayGoodbye); // Output: Hello, Musab! Goodbye!
+
+
+
+    // // 11. Higher Order Function
+    // // A function that takes another function as an argument or returns a function
+    // // Example:
+    // function multiplyBy(factor) {
+    //     return function (number) {
+    //         return number * factor;
+    //     };
+    // }
+    // const d_double = multiplyBy(2);
+    // console.log(d_double(5)); // Output: 10
+
+    // // Example:
+    // function add(a, b) {
+    //     return a + b;
+    // }
+    // function subtract(a, b) {
+    //     return a - b;
+    // }
+    // function calculate(a, b, operation) {
+    //     return operation(a, b);
+    // }
+    // console.log(calculate(5, 3, add)); // Output: 8
+    // console.log(calculate(5, 3, subtract)); // Output: 2
+
+    // // Example:
+    // function createMultiplier(multiplier) {
+    //     return function (number) {
+    //         return number * multiplier;
+    //     };
+    // }
+    // const double = createMultiplier(2);
+    // const triple = createMultiplier(3);
+    // console.log(double(5)); // Output: 10
+    // console.log(triple(5)); // Output: 15
+
+    
+
+    // // 12. Constructor Function
+    // function User(name) {
+    // this.name = name;
+    // }
+    // const user1 = new User("Musab");
+    // console.log(user1.name);
+
+
+
+    // // 13. Async Function
+    // // A Function that returns a promise
+    // async function getData() {
+    // return "Musab";
+    // }
+    // getData().then(console.log);
+
+
+
+
+
+    // // 14. Recursive Function
+    // // A function that calls itself
+    // function countDown(num) {
+    //     console.log(num);
+    //     if (num === 1) {
+    //         return;
+    //     }
+    //     countDown(num - 1);
+    // }
+    // countDown(5);
+
+
+
+
+    // // 15. Method Function
+    // // A Function in an object
+    // const person = {
+    //     name: "Musab",
+    //     greet: function () {
+    //         console.log(`Hello, ${this.name}!`);
+    //     }
+    // };
+    // person.greet(); // Output: Hello, Musab!
+
+
+
+
+    // // 16. Nested Function
+    // // A function inside another function
+    // function outer() {
+    //     function inner() {
+    //         console.log("Inner function");
+    //     }
+    //     inner();
+    // }
+    // outer(); // Output: Inner function
+
+
+
+    // // 17. Closure Function
+    // // A closure happens when a function remembers and can access variables from its outer function even after the outer function has finished executing.
+    // function outer() {
+    // let name = "Musab";
+    // function inner() {
+    //     console.log(name);
+    // }
+    // return inner;
+    // }
+    // const myFunc = outer();
+    // myFunc();
+
+
+
+    
+</script>
+</html>

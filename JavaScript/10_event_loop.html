@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+
+    // Event Loop continuously checks whether the Call Stack is empty. 
+    // When it is empty, it first executes all tasks from the Microtask Queue (Promises) have high priorit.
+    // then executes tasks from the Callback/Macrotask Queue (setTimeout, setInterval, events) have less priorit.
+    
+    // call stack task
+    document.write("Stat" + "<br>")
+
+    //macrotask
+    setTimeout(function(){
+        document.write("Time Out" + "<br>")
+    }, 1000)
+
+    // microtask
+    Promise.resolve().then(function(){
+        document.write("Promise" + "<br>")
+    })
+
+    // call stack task
+    document.write("End" + "<br>")
+</script>
+</html>

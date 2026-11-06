@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHAT IS DOM</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 50px;
+        }
+        .DOM, .BOM{
+            flex: 1;
+        }
+        span, th{
+            color: red;
+            font-size: 20px;
+            font-style: italic;
+        }
+        h2{
+            color: blue;
+            font-style: italic;
+            font-size: 30px;
+            margin: 10px 0;
+        }
+        p{
+            margin: 10px 0;
+        }
+        code{
+            color: green;
+            font-style: italic;
+            font-size: 16px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        table, th, td{
+            border: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,.15);
+            overflow: hidden;
+            border-radius: 10px;
+            table-layout: fixed;
+        }
+
+        th {
+            background: #2196f3;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            /* word-wrap: break-word; */
+            overflow-wrap: break-word;  
+            
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e3f2fd;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .note {
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            background: #eaf4ff;
+            margin-top: 20px;
+            /* width: 80%; */
+        }
+        strong{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="DOM">
+            <h2>DOM</h2>
+            <p><span>DOM</span> is Document Object Model</p>
+            <p>The whole HTML page is called as document</p>
+            <p>An <span>OBJECT</span> is something that has properties and methods.</p>
+            <p>In the DOM, every HTML element becomes an object.</p>
+            <p><span>Model</span> is simply a representation or structure.</p>
+            <p>The browser creates a model (tree structure) of your HTML.</p>
+            <h2>DOM Operations</h2>
+            <ul>
+                <li>Select Element</li>
+                <code>const button = document.querySelector("button");</code>
+                <li>Change Text</li>
+                <code>button.textContent = "Click Me";</code>
+                <li>Change Style</li>
+                <code>document.body.style.backgroundColor = "red";</code>
+                <li>Add Element</li>
+                <code>
+                    const p = document.createElement("p");<br>
+                    p.textContent = "New Paragraph";<br>
+                    document.body.appendChild(p);
+                </code>
+                <li>Remove Element</li>
+                <code>document.body.removeChild(p);</code>
+            </ul>
+            <h2>DOM Components</h2>
+            <ul>
+                <li>Document<p>The whole HTML page is called as document</p></li>
+                <li>Element Nodes<p>HTML TAGS</p></li>
+                <li>Text Nodes<p>TEXT inside ELEMENTS</p></li>
+                <li>Attribute Nodes <pre><code>&lt;button <span>id="btn"</span>&gt;Click&lt;/button&gt;</code></pre>
+</li>
+            </ul>
+            <h2>DOM Properties</h2>
+            <p style="font-style: italic;">Properties are values attached to DOM objects.</p>
+            <code>const button = document.querySelector("#btn");</code>
+            <p style="font-style: italic;">here button is an object and have multiple properties</p>
+            <ul>
+                <li>Create</li>
+                <li>Add</li>
+                <li>Remove</li>
+                <li>Events</li>
+                <li>textContent</li>
+                <li>innerHTML</li>
+                <li>style</li>
+                <li>id</li>
+                <li>className</pre>
+                <li>value</li>
+                <li>children</li>
+                <li>parentElement</li>
+                <li>nextElementSibling</li>
+                <li>previousElementSibling</li>
+                <li>nextElementSibling</li>
+                <li>nextElementSibling</li>
+                <li>nextElementSibling</li>
+            </ul>
+            <h2>DOM Methods</h2>
+            <ul>
+                <li>Select</li>
+                <li>Create</li>
+                <li>Add</li>
+                <li>Remove</li>
+                <li>Events</li>
+            </ul>
+            <h2>DOM Accessible Elements</h2>
+            <p style="font-style: italic;">How can JavaScript access (find/select) HTML elements from the DOM?</p>
+            <ul>
+                <li>getElementById()</li>
+                <pre><code>&lt;button <span>id="btn"</span>&gt;Click&lt;/button&gt;</code></pre>
+                <code>const button = document.getElementById("btn");</code>
+                <li>getElementsByClassName()</li>
+                <code>&lt;p <span>class="text"</span>&gt;Hello&lt;/p&gt;</code>
+                <code>&lt;p <span>class="text"</span>&gt;Hi&lt;/p&gt;</code>
+                <code>const texts = document.getElementsByClassName("text");</code>
+                <li>getElementsByTagName()</li>
+                <code>&lt;<span>p</span> class="text"&gt;Hi&lt;<span>/p</span>&gt;</code>
+                <code>const paragraphs = document.getElementsByTagName("p");</code>
+                <li>querySelector()</li><pre>Select first matching element</pre>
+                <code>&lt;p <span>class="text"</span>&gt;Hello&lt;/p&gt;</code>
+                <code>&lt;p <span>class="text"</span>&gt;Hi&lt;/p&gt;</code>
+                <code>const p = document.querySelector(".text");</code>
+                <pre><span >OUTPUT → </span><code>&lt;p class="text"&gt;Hello&lt;/p&gt;</code></pre>
+                <li>querySelectorAll()</li><pre>Select all matching elements</pre>
+                <code>&lt;p <span>class="text"</span>&gt;Hello&lt;/p&gt;</code>
+                <code>&lt;p <span>class="text"</span>&gt;Hi&lt;/p&gt;</code>
+                <code>const p = document.querySelectorAll(".text");</code>
+            </ul>
+            <h2>DOM SELECTORS</h2>
+            <ul>
+                <li>Element Selector</li>
+                <code>&lt;button&gt;Click&lt;/button&gt;</code>
+                <code>document.querySelector("button");</code>
+                <li>ID Selector</li>
+                <code>&lt;button <span>id="btn"</span>&gt;Click&lt;/button&gt;</code>
+                <code>document.querySelector("#btn");</code>
+                <li>Class Selector</li>
+                <code>&lt;p <span>class="text"</span>&gt;Hi&lt;/p&gt;</code>
+                <code>document.querySelector(".text");</code>
+                <li>Universal Selector</li>
+                <code>document.querySelector("*");</code>
+                <li>Multiple Elements</li>
+                <code>&lt;p&gt;Hi&lt;/p&gt;</code>
+                <code>&lt;h1&gt;WORLD&lt;/h1&gt;</code>
+                <code>document.querySelectorAll("h1, p");</code>
+                <li>Descendant Selector</li>
+                <code>
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello&lt;/p&gt;<br>
+                &lt;/div&gt;
+                </code>
+                <pre><code>document.querySelector("div p");</code><span> Find p inside div.</span></pre>
+                <li>Child Selector</li>
+                <code>
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello&lt;/p&gt;<br>
+                &lt;/div&gt;
+                </code>
+                <pre><code>document.querySelector("div > p");</code><span> Find direct child p.</span></pre>
+                <li>Attribute Selector</li>
+                <code>&lt;input <span>type="text"</span>&gt;</code>
+                <code>document.querySelector('[type="text"]');</code>
+                <li>Pseudo-Class Selector</li>
+                <code>&lt;li&gt;One&lt;/li&gt;</code>
+                <code>&lt;li&gt;Two&lt;/li&gt;</code>
+                <code>&lt;li&gt;Three&lt;/li&gt;</code>
+                <code>document.querySelector("li:first-child");</code>
+            </ul>
+        </div>
+
+
+
+        <div class="BOM">
+            <h2>BOM</h2>
+            <p><span>BOM</span> is Browser Object Model</p>
+            <p>BOM allows JavaScript to interact with the browser itself, not the HTML page.</p>
+            <table>
+                <tr>
+                    <th>DOM</th>
+                    <th>BOM</th>
+                </tr>
+                <tr>
+                    <td>Works with HTML</td>
+                    <td>Works with Browser Window, Browser tab, URL, Screen size and Alerts etc.</td>
+                    
+                </tr>
+                <tr>
+                    <td>document OJECT</td>
+                    <td>window OBJECT</td>
+                    
+                </tr>
+                <tr>
+                    <td>Changes Elements</td>
+                    <td>Control Browser</td>
+                    
+                </tr>
+                <tr>
+                    <td><code>querySelector()</code></td>
+                    <td><code>alert()</code></td>
+                    
+                </tr>
+                <tr>
+                    <td><code>&lt;p id="msg"&gt;Hello&lt;/p&gt;</code></td>
+                    <td><code>alert("Welcome");</code></td>
+                </tr>
+                <tr>
+                    <td><code>document.getElementById("msg").textContent = "Hi";</code></td>
+                    <td><code>location.reload();</code></td>
+                </tr>
+            </table>
+            <div class="note">
+                <strong>Note:</strong> DOM is used to access and manipulate HTML elements, while BOM is used to interact with browser features such as URL, history, storage, window, and navigation.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

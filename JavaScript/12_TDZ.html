@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    //global scope
+    var a = 10;
+    console.log(a);
+    function abc(){
+        console.log(a);
+    }
+    abc();
+
+
+
+    //local scope
+    function abc(){
+        var b = 20;
+        console.log(b);
+    }
+    abc();
+    // console.log(b); // show error
+
+
+
+
+    //block scope
+    // var is not block scope it can be access outside the block
+    // let and const are block scope
+    {
+        var c = 30;
+    }
+    console.log(c);
+    {
+        let d = 40;
+        const e = 50;
+    }
+    // console.log(d); // show error
+    // console.log(e); // show error
+
+    // Temporal Dead Zone
+    // var is not temporal dead zone it can be access before declaration but give undefined
+    // let and const are temporal dead zone it can not be access before declaration
+    console.log("----TDZ----");
+    console.log(marks);
+    let marks = 100
+    console.log(marks);// it mean till line 50 is temporal dead zone
+</script>
+</html>

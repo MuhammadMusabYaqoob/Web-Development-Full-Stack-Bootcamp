@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set()</title>
+</head>
+<body>
+    <script>
+        console.log("=========Set()")
+        // A Set is a special JavaScript collection that stores unique values only.
+        // Set is a collection of unique values. It can store any type of value, whether primitive values or object references.
+        // Set is an iterable object that can be iterated using for...of loop.
+        // no duplicates
+        // no order
+        // no index OUTPUT: undefined
+        // no key-value pairsn
+        var numbers = new Set();
+        numbers.add(1);
+        numbers.add(1);
+        numbers.add(1);
+        numbers.add(2);
+        console.log(numbers);
+
+        console.log("****Creation****")
+        console.log("**** EMPTY SET")
+        var emptySet = new Set();
+        console.log(emptySet);
+
+
+
+
+        console.log("****CREATION FROM ARRAY")
+        var mySet = new Set([1, 2, 2, 3, 3, 4]);
+        console.log(mySet); // Set {1, 2, 3, 4}
+        var nums = [1, 2, 2, 3, 3, 4];
+        var uniqueNums = [...new Set(nums)];
+        console.log(uniqueNums); // Array [1, 2, 3, 4]
+
+
+
+        console.log("****CREATION FROM STRING")
+        var mySet2 = new Set("Hello");
+        console.log(mySet2);
+        var str = "Hello";
+        var uniqueChars = [...new Set(str)];
+        console.log(uniqueChars);
+
+
+
+
+        console.log("****ADDING VALUES")
+        var fruits = new Set(); // EMPTY SET
+        console.log("Before Adding Values")
+        console.log(fruits);
+        fruits.add("Apple");
+        fruits.add("Banana");
+        console.log(fruits);
+
+
+
+
+        console.log("****DELETING VALUES")
+        var fruits = new Set(["Apple", "Banana"]);
+        console.log("Before Deleting Values", fruits)
+        fruits.delete("Apple");
+        console.log("After Deleting Values", fruits);
+
+
+
+
+        console.log("****CHECKING VALUES")
+        var fruits = new Set(["Apple", "Banana"]);
+        console.log(fruits.has("Apple")); // true
+        console.log(fruits.has("Mango")); // false
+
+
+        console.log("****CLEARING VALUES")
+        var fruits = new Set(["Apple", "Banana"]);
+        console.log("Before Clearing Values", fruits)
+        fruits.clear();
+        console.log("After Clearing Values", fruits);
+
+
+
+        console.log("****SIZE")
+        var fruits = new Set(["Apple", "Banana"]);
+        console.log(fruits.size);
+
+
+        
+
+        console.log("****ITERATING OVER VALUES")
+        var fruits = new Set(["Apple", "Banana"]);
+        for (var fruit of fruits) {
+            console.log(fruit);
+        }
+        console.log("****ITERATING OVER VALUES USING FOREACH")
+        fruits.forEach(function (value) {
+            console.log(value);
+        });
+
+    </script>
+</body>
+</html>
