@@ -16,6 +16,6 @@
 - How V8 engine understand CSS, HTML and JavaScript?
 - what is document object in browser? 
 - What is HTML5 Vs Oldversion of HTML?
-- What is meta tag? why it is void type? why there is no closing?
+- What is meta tag? why it is void type? why there is no closing? Are there other void elemments exist? If yes which are?
 - Difference between websites and web applications?
 - Wikipedia is website or web application?
