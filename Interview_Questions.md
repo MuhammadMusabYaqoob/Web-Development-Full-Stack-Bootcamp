@@ -1,7 +1,7 @@
 ## General Question
-- How did separate university networks become connected?
-- What is the difference between an IP and a MAC address?
-- What does a router do? How is a switch different?
+- How did separate university networks become connected? 
+- What is the difference between an IP and a MAC address? who assing IP and MAC?
+- What does a router do? How is a switch different? can we use router on LAN and same for switch?
 - What is peering? What is an Internet Exchange Point?
 - Does one company own the whole Internet?
 - Why does a browser use DNS? Does DNS host website pages?
@@ -19,3 +19,9 @@
 - What is meta tag? why it is void type? why there is no closing? Are there other void elemments exist? If yes which are?
 - Difference between websites and web applications?
 - Wikipedia is website or web application?
+- Why we use index file on every project?
+- What are HTML Tags? 
+- Block Element vs Inline Elements
+- `<b>` vs `<strong>`, `<i>` vs `<em>`
+- What are attributes? why we need attributes?
+- What are internal links vs external links?
